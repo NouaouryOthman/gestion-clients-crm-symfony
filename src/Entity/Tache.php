@@ -27,6 +27,11 @@ class Tache
      */
     private $date;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Client::class, inversedBy="taches")
+     */
+    private $client;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -52,6 +57,18 @@ class Tache
     public function setDate(\DateTimeInterface $date): self
     {
         $this->date = $date;
+
+        return $this;
+    }
+
+    public function getClient(): ?Client
+    {
+        return $this->client;
+    }
+
+    public function setClient(?Client $client): self
+    {
+        $this->client = $client;
 
         return $this;
     }

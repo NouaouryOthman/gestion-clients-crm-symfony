@@ -22,6 +22,11 @@ class Note
      */
     private $texte;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Client::class, inversedBy="notes")
+     */
+    private $client;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -35,6 +40,18 @@ class Note
     public function setTexte(string $texte): self
     {
         $this->texte = $texte;
+
+        return $this;
+    }
+
+    public function getClient(): ?Client
+    {
+        return $this->client;
+    }
+
+    public function setClient(?Client $client): self
+    {
+        $this->client = $client;
 
         return $this;
     }
