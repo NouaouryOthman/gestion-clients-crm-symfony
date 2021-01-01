@@ -40,4 +40,11 @@ class ClientController extends AbstractController
             'form' => $form->createView()
         ]);
     }
+
+    /**
+     * @Route("/afficherClient/{id}", name="client")
+    */
+    public function afficherClient(Client $client) {
+        return $this->render('client/afficherClient.html.twig',['client'=>$client]);
+    }
 }

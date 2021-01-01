@@ -19,7 +19,7 @@
   <tbody>
   {% for client in clients %}
     <tr class="table-light">
-      <td><a>{{client.nom}}</a></td>
+      <td><a href="{{path('client',{'id':client.id})}}" class="btn">{{client.nom}}</a></td>
       <td>{{client.prenom}}</td>
       <td>{{client.societe.nom}}</td>
       <td>{{client.societe.adresse}}</td>
