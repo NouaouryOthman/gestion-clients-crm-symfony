@@ -3,7 +3,9 @@
 namespace App\Controller;
 
 use App\Entity\Client;
+use App\Entity\Note;
 use App\Form\ClientType;
+use App\Form\NoteType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -64,5 +66,24 @@ class ClientController extends AbstractController
             'form'=>$form->createView(),
             'client'=>$client
         ]);
+    }
+
+    /**
+     * @Route("/ajouterNoteClient/{id}", name="ajouterNoteClient")
+     */
+    public function ajouterNoteClient(Client $client, Request $request) {
+        $note = new Note();
+        $note->setClient($client);
+        $form=$this->createForm(NoteType::class,$note);
+        $form->handleRequest($request);
+        $manager=$this->getDoctrine()->getManager();
+        if($form->isSubmitted() && $form->isValid()){
+            $manager->persist($note);
+            $manager->flush();
+            return $this->redirectToRoute("client",['id'=>$note->getClient()->getId()]);
+        }
+        return $this->render("client/ajouterNoteClient.html.twig",[
+            'form'=>$form->createView(),
+            'client'=>$client]);
     }
 }
