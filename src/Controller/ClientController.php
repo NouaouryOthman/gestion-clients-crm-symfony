@@ -47,4 +47,22 @@ class ClientController extends AbstractController
     public function afficherClient(Client $client) {
         return $this->render('client/afficherClient.html.twig',['client'=>$client]);
     }
+
+    /**
+     * @Route("/modifierClient/{id}", name="modifierClient")
+     */
+    public function modifierClient(Client $client, Request $request) {
+        $form=$this->createForm(ClientType::class,$client);
+        $form->handleRequest($request);
+        $manager=$this->getDoctrine()->getManager();
+        if($form->isSubmitted() && $form->isValid()){
+            $manager->persist($client);
+            $manager->flush();
+            return $this->redirectToRoute("client",['id'=>$client->getId()]);
+        }
+        return $this->render("client/modifierClient.html.twig",[
+            'form'=>$form->createView(),
+            'client'=>$client
+        ]);
+    }
 }

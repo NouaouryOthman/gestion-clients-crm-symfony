@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="008f83fd-40c8-4680-8bc2-bdb9eb02acd6" name="Default Changelist" comment="Ajouter une fiche client">
+    <list default="true" id="008f83fd-40c8-4680-8bc2-bdb9eb02acd6" name="Default Changelist" comment="Visualiser une fiche client">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ClientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ClientController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/client/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/client/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/client/afficherClient.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/client/afficherClient.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +149,7 @@
       <updated>1607563818544</updated>
       <workItem from="1607563820052" duration="1780000" />
       <workItem from="1607805902893" duration="4295000" />
-      <workItem from="1609525738274" duration="4450000" />
+      <workItem from="1609525738274" duration="6780000" />
     </task>
     <task id="LOCAL-00001" summary="Symfony installation">
       <created>1607564774028</created>
@@ -186,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609528294595</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Visualiser une fiche client">
+      <created>1609535324594</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1609535324594</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,6 +228,7 @@
     <MESSAGE value="-" />
     <MESSAGE value="Doctrine + Entities" />
     <MESSAGE value="Ajouter une fiche client" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajouter une fiche client" />
+    <MESSAGE value="Visualiser une fiche client" />
+    <option name="LAST_COMMIT_MESSAGE" value="Visualiser une fiche client" />
   </component>
 </project>
