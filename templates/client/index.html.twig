@@ -1,20 +1,32 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ClientController!{% endblock %}
+{% block title %}Acceuil{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello ! ✅</h1>
+<div class="jumborton" style="width: 50%; float: right; padding: 20px; border: 2px">
+<a><h3 class="display-6">Les Clients</h3></a>
+<a href="{{path('newClient')}}" class="btn btn-info pull-right" style="margin-right: 20px">+</a>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Prénom</th>
+      <th>Société</th>
+      <th>Adresse</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for client in clients %}
+    <tr class="table-light">
+      <td><a>{{client.nom}}</a></td>
+      <td>{{client.prenom}}</td>
+      <td>{{client.societe.nom}}</td>
+      <td>{{client.societe.adresse}}</td>
+    </tr>
+    {% endfor %}
+   </tbody>
+   </table>
+   </div>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/wamp64/www/crm/src/Controller/ClientController.php'|file_link(0) }}">src/Controller/ClientController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/wamp64/www/crm/templates/client/index.html.twig'|file_link(0) }}">templates/client/index.html.twig</a></code></li>
-    </ul>
-</div>
 {% endblock %}

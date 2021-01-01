@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter Client{% endblock %}
+
+{% block body %}
+Nouveau Client
+{{form_start(form)}}
+{{form_widget(form)}}
+<div class="form-group">
+    <legend>La societe ne figure pas dans la liste ?</legend>
+    <a href="{{path('societe')}}" class="btn btn-primary">Ajoutez-la!</a>
+</div>
+<button type="submit" class="btn btn-success">Enregister</button>
+{{form_end(form)}}
+{% endblock %}

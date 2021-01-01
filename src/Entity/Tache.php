@@ -32,6 +32,11 @@ class Tache
      */
     private $client;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $statut;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -69,6 +74,18 @@ class Tache
     public function setClient(?Client $client): self
     {
         $this->client = $client;
+
+        return $this;
+    }
+
+    public function getStatut(): ?string
+    {
+        return $this->statut;
+    }
+
+    public function setStatut(string $statut): self
+    {
+        $this->statut = $statut;
 
         return $this;
     }

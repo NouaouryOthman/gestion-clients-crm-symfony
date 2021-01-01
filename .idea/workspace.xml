@@ -3,13 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="008f83fd-40c8-4680-8bc2-bdb9eb02acd6" name="Default Changelist" comment="Doctrine + Entities">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201212214650.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ClientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ClientController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Tache.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Tache.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/NoteRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/NoteRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/client/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/client/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/client/newClient.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/client/newClient.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/compte/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/compte/login.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -146,6 +155,7 @@
       <updated>1607563818544</updated>
       <workItem from="1607563820052" duration="1780000" />
       <workItem from="1607805902893" duration="4295000" />
+      <workItem from="1609525738274" duration="2470000" />
     </task>
     <task id="LOCAL-00001" summary="Symfony installation">
       <created>1607564774028</created>
