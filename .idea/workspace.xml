@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="008f83fd-40c8-4680-8bc2-bdb9eb02acd6" name="Default Changelist" comment="Ajouter une note">
+    <list default="true" id="008f83fd-40c8-4680-8bc2-bdb9eb02acd6" name="Default Changelist" comment="Visualiser les notes client">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ClientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ClientController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/NoteRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/NoteRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/RoleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/RoleRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/client/afficherClient.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/client/afficherClient.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -151,7 +149,7 @@
       <updated>1607563818544</updated>
       <workItem from="1607563820052" duration="1780000" />
       <workItem from="1607805902893" duration="4295000" />
-      <workItem from="1609525738274" duration="12015000" />
+      <workItem from="1609525738274" duration="14085000" />
     </task>
     <task id="LOCAL-00001" summary="Symfony installation">
       <created>1607564774028</created>
@@ -209,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609544207658</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Visualiser les notes client">
+      <created>1609548296766</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1609548296766</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,6 +252,7 @@
     <MESSAGE value="Visualiser une fiche client" />
     <MESSAGE value="Modifier une fiche client" />
     <MESSAGE value="Ajouter une note" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajouter une note" />
+    <MESSAGE value="Visualiser les notes client" />
+    <option name="LAST_COMMIT_MESSAGE" value="Visualiser les notes client" />
   </component>
 </project>

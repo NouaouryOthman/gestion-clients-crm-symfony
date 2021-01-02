@@ -4,8 +4,10 @@ namespace App\Controller;
 
 use App\Entity\Client;
 use App\Entity\Note;
+use App\Entity\Tache;
 use App\Form\ClientType;
 use App\Form\NoteType;
+use App\Form\TacheType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -94,5 +96,25 @@ class ClientController extends AbstractController
      */
     public function notesClient(Client $client) {
         return $this->render('client/notesClient.html.twig',['client'=>$client]);
+    }
+
+    /**
+     * @Route("/ajouterTacheClient/{id}", name="ajouterTacheClient")
+     */
+    public function ajouterNote(Client $client, Request $request) {
+        $tache = new Tache();
+        $tache->setClient($client);
+        $tache->setStatut("A faire");
+        $form=$this->createForm(TacheType::class,$tache);
+        $form->handleRequest($request);
+        $manager=$this->getDoctrine()->getManager();
+        if($form->isSubmitted() && $form->isValid()){
+            $manager->persist($tache);
+            $manager->flush();
+            return $this->redirectToRoute("index");
+        }
+        return $this->render("client/ajouterTacheClient.html.twig",[
+            'form'=>$form->createView(),
+            'client'=>$client]);
     }
 }

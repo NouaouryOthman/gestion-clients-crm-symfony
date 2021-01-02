@@ -35,6 +35,7 @@
         </div>
         <div class="modal-footer">
             <a href="{{path('ajouterNoteClient',{'id':client.id})}}" class="btn btn-success">Ajouter une Note</a>
+            <a href="{{path('ajouterTacheClient',{'id':client.id})}}" class="btn btn-success">Ajouter une Tâche</a>
             {% if compteur > 1 %}
                 <a href="{{path('notesClient',{'id':client.id})}}" class="btn btn-success">Voir anciennes notes</a>
             {% endif %}
