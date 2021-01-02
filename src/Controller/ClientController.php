@@ -111,10 +111,20 @@ class ClientController extends AbstractController
         if($form->isSubmitted() && $form->isValid()){
             $manager->persist($tache);
             $manager->flush();
-            return $this->redirectToRoute("index");
+            return $this->redirectToRoute("client",['id'=>$tache->getClient()->getId()]);
         }
         return $this->render("client/ajouterTacheClient.html.twig",[
             'form'=>$form->createView(),
             'client'=>$client]);
+    }
+
+    /**
+     * @Route("/supprimerTache/{id}", name="supprimerTache")
+     */
+    public function supprimerTacheClient(Tache $tache) {
+        $manager=$this->getDoctrine()->getManager();
+        $manager->remove($tache);
+        $manager->flush();
+        return $this->redirectToRoute("client",['id'=>$tache->getClient()->getId()]);
     }
 }
