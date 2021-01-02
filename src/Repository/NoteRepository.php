@@ -47,4 +47,25 @@ class NoteRepository extends ServiceEntityRepository
         ;
     }
     */
+
+
+    public function compteurNotes($value){
+        return $this->createQueryBuilder('a')
+            ->select('count(a.id)')
+            ->where('a.client = :value')
+            ->setParameter('value', $value)
+            ->getQuery()
+            ->getSingleScalarResult();
+    }
+
+    public function derniereNote($value) {
+        return $this->createQueryBuilder('n')
+            ->where('n.client = :value')
+            ->setParameter('value', $value)
+            ->orderBy('n.id', 'desc')
+            ->setMaxResults(1)
+            ->getQuery()
+            ->getResult()
+            ;
+    }
 }

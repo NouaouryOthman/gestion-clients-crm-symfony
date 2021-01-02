@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Acceuil{% endblock %}
+
+{% block body %}
+
+   </div>
+    <div class="container" style="margin:0 auto">
+        <p><h3 class="display-6">Les notes du client {{client.id}}</h3>
+        <div class="row">
+            <table class="table table-hover" >
+                <thead>
+                <tr>
+                    <th>Notes</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for note in client.notes %}
+                    <tr class="table-light" >
+                        <td style="word-wrap: break-word; word-break: break-all">{{note.texte}}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}

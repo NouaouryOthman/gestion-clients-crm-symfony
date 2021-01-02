@@ -47,7 +47,9 @@ class ClientController extends AbstractController
      * @Route("/afficherClient/{id}", name="client")
     */
     public function afficherClient(Client $client) {
-        return $this->render('client/afficherClient.html.twig',['client'=>$client]);
+        $compteur = $this->getDoctrine()->getRepository(Note::class)->compteurNotes($client->getId());
+        $note = $this->getDoctrine()->getRepository(Note::class)->derniereNote($client->getId());
+        return $this->render('client/afficherClient.html.twig',['client'=>$client,'note'=>$note, 'compteur'=>$compteur]);
     }
 
     /**
@@ -85,5 +87,12 @@ class ClientController extends AbstractController
         return $this->render("client/ajouterNoteClient.html.twig",[
             'form'=>$form->createView(),
             'client'=>$client]);
+    }
+
+    /**
+     * @Route("/notesClient/{id}", name="notesClient")
+     */
+    public function notesClient(Client $client) {
+        return $this->render('client/notesClient.html.twig',['client'=>$client]);
     }
 }

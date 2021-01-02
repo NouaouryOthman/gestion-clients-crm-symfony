@@ -21,14 +21,23 @@
                         <dd class="col-md-8">{{client.telephone}}</dd>
                         <dd class="col-md-4">Adresse Société</dd>
                         <dd class="col-md-8">{{client.societe.adresse}}</dd>
-
                         </div>
+                </div>
+                <div class="alert alert-light">
+                    <div class="row" style="word-wrap: break-word">
+                        <dd class="col-md-4">La note la plus récente</dd>
+                        {% for n in note %}
+                            <dd class="col-md-8">{{n.texte}}</dd>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>
         <div class="modal-footer">
             <a href="{{path('ajouterNoteClient',{'id':client.id})}}" class="btn btn-success">Ajouter une Note</a>
-
+            {% if compteur > 1 %}
+                <a href="{{path('notesClient',{'id':client.id})}}" class="btn btn-success">Voir anciennes notes</a>
+            {% endif %}
    </div>
 
 {% endblock %}
