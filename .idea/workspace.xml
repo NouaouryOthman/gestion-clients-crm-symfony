@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="008f83fd-40c8-4680-8bc2-bdb9eb02acd6" name="Default Changelist" comment="Empiler une tâche">
+    <list default="true" id="008f83fd-40c8-4680-8bc2-bdb9eb02acd6" name="Default Changelist" comment="Supprimer une tâche client">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ClientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ClientController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/CompteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CompteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/client/afficherClient.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/client/afficherClient.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/client/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/client/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/compte/login.html.twig" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,6 +142,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -150,7 +157,9 @@
       <workItem from="1607563820052" duration="1780000" />
       <workItem from="1607805902893" duration="4295000" />
       <workItem from="1609525738274" duration="14283000" />
-      <workItem from="1609597515547" duration="2064000" />
+      <workItem from="1609597515547" duration="16149000" />
+      <workItem from="1609628755015" duration="28000" />
+      <workItem from="1609632387824" duration="200000" />
     </task>
     <task id="LOCAL-00001" summary="Symfony installation">
       <created>1607564774028</created>
@@ -222,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609556192840</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Supprimer une tâche client">
+      <created>1609599700174</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1609599700174</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,7 +255,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="insset/supprimer-tâche" />
                       </list>
                     </value>
                   </entry>
@@ -262,6 +278,7 @@
     <MESSAGE value="Ajouter une note" />
     <MESSAGE value="Visualiser les notes client" />
     <MESSAGE value="Empiler une tâche" />
-    <option name="LAST_COMMIT_MESSAGE" value="Empiler une tâche" />
+    <MESSAGE value="Supprimer une tâche client" />
+    <option name="LAST_COMMIT_MESSAGE" value="Supprimer une tâche client" />
   </component>
 </project>

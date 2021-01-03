@@ -21,7 +21,8 @@ class ClientController extends AbstractController
     public function index()
     {
         $clients = $this->getDoctrine()->getRepository(Client::class)->findAll();
-        return $this->render('client/index.html.twig', ['clients' => $clients]);
+        $taches = $this->getDoctrine()->getRepository('App\Entity\Tache')->findAll();
+        return $this->render('client/index.html.twig', ['clients' => $clients,'taches'=>$taches]);
     }
 
     /**
@@ -126,5 +127,37 @@ class ClientController extends AbstractController
         $manager->remove($tache);
         $manager->flush();
         return $this->redirectToRoute("client",['id'=>$tache->getClient()->getId()]);
+    }
+
+    /**
+     * @Route("/validerTache/{id}", name="validerTache")
+     */
+    public function validerTacheClient(Tache $tache) {
+        $manager=$this->getDoctrine()->getManager();
+        $tache->setStatut("Fait");
+        $manager->persist($tache);
+        $manager->flush();
+        return $this->redirectToRoute("client",['id'=>$tache->getClient()->getId()]);
+    }
+
+    /**
+     * @Route("/supprimerTachehome/{id}", name="supprimerTachehome")
+     */
+    public function supprimerTacheClienthome(Tache $tache) {
+        $manager=$this->getDoctrine()->getManager();
+        $manager->remove($tache);
+        $manager->flush();
+        return $this->redirectToRoute("index");
+    }
+
+    /**
+     * @Route("/validerTachehome/{id}", name="validerTachehome")
+     */
+    public function validerTacheClienthome(Tache $tache) {
+        $manager=$this->getDoctrine()->getManager();
+        $tache->setStatut("Fait");
+        $manager->persist($tache);
+        $manager->flush();
+        return $this->redirectToRoute("index");
     }
 }

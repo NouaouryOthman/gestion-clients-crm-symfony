@@ -14,31 +14,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class CompteController extends AbstractController
 {
-    /**
-     * Permet de se connecter
-     * @Route("/login", name="compte_login")
-     * 
-     * @return Response
-     */
-    public function login(AuthenticationUtils $utils)
-    {
-        $error=$utils->getLastAuthenticationError();
-        $username=$utils->getLastUsername();
-        return $this->render('compte/login.html.twig',[
-            'haserror'=>$error!==null,
-            'username'=>$username
-        ]);
-    }
-    /**
-     * Permet de se deconnecter
-     *@Route("/logout",name="compte_logout")
-     * 
-     * @return void
-     */
-    public function logout()
-    {
 
-    }
     /**
      * Permet de s'inscrire
      *@Route("/register",name="compte_register")
@@ -59,7 +35,7 @@ class CompteController extends AbstractController
             $manager->persist($user);
             $manager->flush();
             $this->addFlash("success","Inscription effectuée. Vous pouvez vous connectez!");
-            return $this->redirectToRoute("compte_login");
+            return $this->redirectToRoute("app_login");
         }
         return $this->render('compte/registration.html.twig',[
             'form'=>$form->createView()

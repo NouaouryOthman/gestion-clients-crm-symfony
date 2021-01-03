@@ -3,30 +3,67 @@
 {% block title %}Acceuil{% endblock %}
 
 {% block body %}
+  <div class="jumborton" style="width: 50%; float: left; padding: 20px; border: 2px">
+    <h3 class="display-6">Les Tâches</h3>
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th>Tache</th>
+        <th>Date</th>
+        <th>Statut</th>
+        <th>Valider</th>
+        <th>Supprimer</th>
 
-<div class="jumborton" style="width: 50%; float: right; padding: 20px; border: 2px">
-<a><h3 class="display-6">Les Clients</h3></a>
-<a href="{{path('newClient')}}" class="btn btn-info pull-right" style="margin-right: 20px">+</a>
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th>Nom</th>
-      <th>Prénom</th>
-      <th>Société</th>
-      <th>Adresse</th>
-    </tr>
-  </thead>
-  <tbody>
-  {% for client in clients %}
-    <tr class="table-light">
-      <td><a href="{{path('client',{'id':client.id})}}" class="btn">{{client.nom}}</a></td>
-      <td>{{client.prenom}}</td>
-      <td>{{client.societe.nom}}</td>
-      <td>{{client.societe.adresse}}</td>
-    </tr>
-    {% endfor %}
-   </tbody>
-   </table>
-   </div>
+      </tr>
+      </thead>
+      <tbody>
+      {% for tache in taches %}
+        </br></br>
+        <tr class="table-light">
+          <td style="word-wrap: break-word; word-break: break-all">{{tache.texte}}</td>
+          <td>{{tache.date|date('d/m/Y')}}</td>
+          <td>{{tache.statut}}</td>
+          <td>
+            {% if tache.statut == "A faire" %}
+            <a href="{{path('validerTachehome',{'id':tache.id})}}" class="btn btn-success"><span class="fa fa-check"></span></a></td>
+          {% else %}
+            <a href="{{path('validerTache',{'id':tache.id})}}" class="btn btn-success disabled"><span class="fa fa-check"></span></a>
+          {% endif %}
+          </td>
+          <td><a href="{{path('supprimerTachehome',{'id':tache.id})}}" onclick="return confirm('Êtes-vous sûr?')" class="btn btn-danger"><span class="fa fa-trash" style="margin:0 auto"></span></a></td>
+
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <div class="jumborton" style="width: 50%; float: right; padding: 20px; border: 2px">
+    <a><h3 class="display-6">Les Clients</h3></a>
+    <a href="{{path('newClient')}}" class="btn btn-info pull-right" style="margin-bottom: 10px; margin-right: 10px" >Ajouter un Client</a>
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Société</th>
+        <th>Adresse</th>
+        <th>Modifier Client</th>
+        <th>Ajouter Note</th>
+      </tr>
+      </thead>
+      <tbody>
+      {% for client in clients %}
+        <tr class="table-light" style="word-wrap: break-word; word-break: break-all">
+          <td><a href="{{path('client',{'id':client.id})}}" class="btn">{{client.nom}}</a></td>
+          <td>{{client.prenom}}</td>
+          <td>{{client.societe.nom}}</td>
+          <td>{{client.societe.adresse}}</td>
+          <td><a href="{{path('modifierClient',{'id':client.id})}}" class="btn btn-info"><span class="fa fa-pencil-square-o"></span></a></td>
+          <td><a href="{{path('ajouterNoteClient',{'id':client.id})}}" class="btn btn-info">+</a></td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
 
 {% endblock %}
