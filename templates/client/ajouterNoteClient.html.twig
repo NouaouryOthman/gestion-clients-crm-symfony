@@ -3,10 +3,15 @@
 {% block title %}Ajouter Note{% endblock %}
 
 {% block body %}
-<h1>Ajouter une Note pour le Client N°{{client.id}}</h1>
+<div class="container alert-light">
+<h1 class="display-6 text-center">Ajouter une Note pour le Client N°{{client.id}}</h1>
 {{form_start(form)}}
-{{form_widget(form)}}
-<button type="submit" class="btn btn-success">Ajouter</button>
-<a class="btn btn-primary" href="{{path('client',{'id':client.id})}}">Retour</a>
+{{form_widget(form.texte)}}
+    <hr class="my-3">
+<div class="modal-footer">
+<button type="submit" class="btn btn-success" style="margin-bottom: 10px">Ajouter</button>
+<a class="btn btn-secondary" style="margin-bottom: 10px" href="{{path('client',{'id':client.id})}}">Retour</a>
+</div>
 {{form_end(form)}}
+</div>
 {% endblock %}

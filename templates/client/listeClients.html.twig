@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nos Clients{% endblock %}
+
+{% block body %}
+  {{ knp_pagination_filter(clients, { 'client.societe.nom': 'societe' }) }}
+  <table class="table table-hover">
+
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Nom</th>
+    <th>Prénom</th>
+    <th>Email</th>
+    <th>Téléphone</th>
+    <th>Société</th>
+    <th>Adresse</th>
+    <th>Modifier Client</th>
+  </tr>
+  </thead>
+  <tbody>
+  {% for client in clients %}
+    <tr class="table-light">
+      <td>{{client.id}}</td>
+      <td><a href="{{path('client',{'id':client.id})}}" class="btn">{{client.nom}}</a></td>
+      <td>{{client.prenom}}</td>
+      <td>{{client.email}}</td>
+      <td>{{client.telephone}}</td>
+      <td>{{client.societe.nom}}</td>
+      <td>{{client.societe.adresse}}</td>
+      <td><a href="{{path('modifierClient',{'id':client.id})}}" class="btn btn-info"><span class="fa fa-pencil-square-o"></span></a></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+  <div class="text-center">
+  {{ knp_pagination_render(clients, '@KnpPaginator/Pagination/twitter_bootstrap_v3_pagination.html.twig') }}
+  </div>
+{% endblock %}

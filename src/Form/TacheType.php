@@ -14,7 +14,9 @@ class TacheType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-        ->add('texte',TextareaType::class)
+        ->add('texte',TextareaType::class, [
+            'attr' => ['maxlength' => 1000]
+        ])
         ->add('date',DateType::class)
         ;
     }

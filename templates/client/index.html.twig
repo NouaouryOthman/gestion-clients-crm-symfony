@@ -18,7 +18,7 @@
       </thead>
       <tbody>
       {% for tache in taches %}
-        </br></br>
+        </br>
         <tr class="table-light">
           <td style="word-wrap: break-word; word-break: break-all">{{tache.texte}}</td>
           <td>{{tache.date|date('d/m/Y')}}</td>
@@ -38,7 +38,8 @@
     </table>
   </div>
   <div class="jumborton" style="width: 50%; float: right; padding: 20px; border: 2px">
-    <a><h3 class="display-6">Les Clients</h3></a>
+    <a><h3>Les Clients</h3></a>
+    <a href="{{path('listeClients')}}" class="btn btn-secondary pull-right" style="margin-bottom: 10px; margin-right: 10px" >Lister tous les clients</a>
     <a href="{{path('newClient')}}" class="btn btn-info pull-right" style="margin-bottom: 10px; margin-right: 10px" >Ajouter un Client</a>
     <table class="table table-hover">
       <thead>

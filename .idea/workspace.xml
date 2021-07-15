@@ -1,11 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="008f83fd-40c8-4680-8bc2-bdb9eb02acd6" name="Default Changelist" comment="Dépiler une tâche client">
+    <list default="true" id="008f83fd-40c8-4680-8bc2-bdb9eb02acd6" name="Default Changelist" comment="Se déconnecter">
+      <change beforePath="$PROJECT_DIR$/.idea/crm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/crm.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/translation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ClientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ClientController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ClientType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ClientType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/NoteType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/NoteType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/TacheType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/TacheType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/client/afficherClient.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/client/afficherClient.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/client/ajouterNoteClient.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/client/ajouterNoteClient.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/client/ajouterTacheClient.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/client/ajouterTacheClient.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/client/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/client/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/client/modifierClient.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/client/modifierClient.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/client/newClient.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/client/newClient.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/societe/ajouterSociete.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/societe/ajouterSociete.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +36,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -122,6 +148,8 @@
       <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
       <path value="$PROJECT_DIR$/vendor/symfony/web-profiler-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/web-link" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
     </include_path>
   </component>
   <component name="ProjectId" id="1lRdPy9uSfsvfD1qNwOsLdwhRgI" />
@@ -156,6 +184,8 @@
       <workItem from="1609632387824" duration="200000" />
       <workItem from="1609639267777" duration="5990000" />
       <workItem from="1609686392395" duration="15000" />
+      <workItem from="1609705711621" duration="1522000" />
+      <workItem from="1609707304892" duration="8762000" />
     </task>
     <task id="LOCAL-00001" summary="Symfony installation">
       <created>1607564774028</created>
@@ -248,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609639574549</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Se déconnecter">
+      <created>1609705815948</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1609705815948</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,6 +327,7 @@
     <MESSAGE value="Empiler une tâche" />
     <MESSAGE value="Supprimer une tâche client" />
     <MESSAGE value="Dépiler une tâche client" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dépiler une tâche client" />
+    <MESSAGE value="Se déconnecter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se déconnecter" />
   </component>
 </project>

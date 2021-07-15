@@ -12,7 +12,9 @@ class NoteType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('texte',TextareaType::class);
+        $builder->add('texte',TextareaType::class, [
+            'attr' => ['maxlength' => 5000]
+        ]);
     }
 
     public function configureOptions(OptionsResolver $resolver)

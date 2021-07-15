@@ -3,9 +3,13 @@
 {% block title %}Ajouter Societe{% endblock %}
 
 {% block body %}
-<h1>Ajouter une Societe</h1>
+<div class="container alert-light">
+<h1 class="display-6 text-center">Ajouter une Societe</h1>
 {{form_start(form)}}
 {{form_widget(form)}}
+<div class="modal-footer">
 <button type="submit" class="btn btn-success">Ajouter</button>
 {{form_end(form)}}
+</div>
+</div>
 {% endblock %}

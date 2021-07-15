@@ -23,7 +23,7 @@ class SocieteController extends AbstractController
         {
             $manager->persist($societe);
             $manager->flush();
-            return $this->redirectToRoute('newClient');
+            return $this->redirectToRoute('listeClients');
         }
         return $this->render('societe/ajouterSociete.html.twig',[
             'form'=>$form->createView()

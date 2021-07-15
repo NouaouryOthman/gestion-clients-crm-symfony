@@ -9,6 +9,7 @@ use App\Form\ClientType;
 use App\Form\NoteType;
 use App\Form\TacheType;
 use Doctrine\ORM\EntityManagerInterface;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
@@ -23,6 +24,27 @@ class ClientController extends AbstractController
         $clients = $this->getDoctrine()->getRepository(Client::class)->findAll();
         $taches = $this->getDoctrine()->getRepository('App\Entity\Tache')->findAll();
         return $this->render('client/index.html.twig', ['clients' => $clients,'taches'=>$taches]);
+    }
+
+
+    /**
+     * @Route("/listeClients", name="listeClients")
+     */
+    public function listeClients(Request $request, PaginatorInterface $paginator) {
+
+        $donnees = $this->getDoctrine()->getRepository(Client::class)->findAll([],['created_at' => 'desc']);
+        if ($request->query->getAlnum('filter')) {
+            $donnees
+                ->where('client.societe.nom LIKE :societe')
+                ->setParameter('societe', '%' . $request->query->getAlnum('filter') . '%');
+        }
+        $clients = $paginator->paginate(
+            $donnees,
+            $request->query->getInt('page', 1),
+            5
+        );
+
+        return $this->render('client/listeClients.html.twig',['clients'=>$clients,'societe'=>$donnees]);
     }
 
     /**

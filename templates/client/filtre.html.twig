@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Acceuil{% endblock %}
+
+{% block body %}
+<div class="jumborton" style="float:left;width:600px">
+<h3 class="display-6">Les taches</h3>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Tache</th>
+      <th>Statut</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for tache in taches %}
+    <tr class="table-light">
+      <td>{{tache.texte}}</td>
+      <td>{{tache.statut}}</td>
+      <td>{{tache.date|date('d/m/Y')}}</td>
+    </tr>
+    {% endfor %}
+   </tbody>
+   </table>
+</div>
+<div class="jumborton" style="float:right;width:600px;">
+<a href="{{path('listeClients')}}"><h3 class="display-6">Les Clients</h3></a>
+<a href="{{path('newClient')}}" class="btn btn-info" >+</a>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Prénom</th>
+      <th>Société</th>
+      <th>Adresse</th>
+      <th>Modifier Client</th>
+      <th>Ajouter Note</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for client in clients %}
+    <tr class="table-light">
+      <td><a href="{{path('client',{'id':client.id})}}" class="btn">{{client.nom}}</a></td>
+      <td>{{client.prenom}}</td>
+      <td>{{client.societe.nom}}</td>
+      <td>{{client.societe.adresse}}</td>
+      <td><a href="{{path('modifierClient',{'id':client.id})}}" class="btn btn-info"><span class="fa fa-pencil-square-o"></span></a></td>
+      <td><a href="{{path('ajouterNoteClient',{'id':client.id})}}" class="btn btn-info">+</a></td>
+    </tr>
+    {% endfor %}
+   </tbody>
+   </table>
+   </div>
+
+{% endblock %}

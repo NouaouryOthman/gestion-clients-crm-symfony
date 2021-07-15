@@ -3,14 +3,18 @@
 {% block title %}Modifier{% endblock %}
 
 {% block body %}
-<h1>Modifier le Client N°{{client.id}}</h1>
+<div class="container alert-light">
+<h1 class="display-6 text-center">Modifier le Client N°{{client.id}}</h1>
 {{form_start(form)}}
 {{form_widget(form)}}
 <div class="form-group">
     <legend>La societe ne figure pas dans la liste ?</legend>
-    <a href="{{path('societe')}}" class="btn btn-primary">Ajoutez-la!</a>
+    <a class="btn btn-outline-primary" href="{{path('societe')}}">Ajoutez-la!</a>
 </div>
-<a ><button type="submit" class="btn btn-primary">Modifier</button>
-<a class="btn btn-primary" href="{{path('client',{'id':client.id})}}">Retour</a>
+<div class="modal-footer">
+<button type="submit" class="btn btn-primary">Modifier</button>
+<a class="btn btn-secondary" href="{{path('client',{'id':client.id})}}">Retour</a>
 {{form_end(form)}}
+</div>
+</div>
 {% endblock %}
